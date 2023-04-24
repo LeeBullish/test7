@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 150px;
+        }
+        .slider-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    animation: scrollImages 50s linear infinite;
+    animation-delay: 5s;
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-9000%);
+    }
+}
+
+</style>
+<title>Hash Pimps</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="pimp-casino.html">Pimp Casino</a></li>
+                <li><a href="staking-rewards.html">Staking & Rewards</a></li>
+                <li><a href="advertisement-section.html">Advertisement Section</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="faq-support.html">FAQ & Support</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Hash Pimps</h1>
+            <!-- Add key highlights, news, and countdown timer here -->
+            <div class="image-slider" id="image-slider">
+            </div>
+        </section>
+    </main>
+    <div class="main-wrapper"></div>
+    <footer>
+        <img src="pimpinh aint easy.jpg" alt="A description of the image" width="300">
+        <p>&copy; 2023 Hash Pimps. All rights reserved.</p>
+    </footer>
+    <script>
+        const images = [
+        "1 c1.png",   
+"10 d2.png",  
+"100 r26.png",
+"101 c25.png",
+"102 d26.png",
+"103 j26.png",
+"104 r27.png",
+"105 c26.png",
+"106 d27.png",
+"107 j27.png",
+"108 r28.png",
+"109 c27.png",
+"11 j4.png",  
+"110 d28.png",
+"111 j28.png",
+"112 r29.png",
+"113 c28.png",
+"114 d29.png",
+"115 j29.png",
+"116 r30.png",
+"117 c29.png",
+"118 d30.png",
+"119 j30.png",
+"12 r4.png",
+"120 c30.png",
+"121 c31.png",
+"122 d31.png",
+"123 j31.png",
+"124 r31.png",
+"125 c32.png",
+"126 d32.png",
+"127 j32.png",
+"128 r32.png",
+"129 c33.png",
+"13 c3.png",
+"130 d33.png",
+"131 j33.png",
+"132 r33.png",
+"133 c34.png",
+"134 d34.png",
+"135 j34.png",
+"136 r34.png",
+"137 c35.png",
+"138 d35.png",
+"139 j35.png",
+"14 d3.png",
+"140 r35.png",
+"141 c36.png",
+"142 d36.png",
+"143 j36.png",
+"144 r36.png",
+"145 c37.png",
+"146 d37.png",
+"147 j37.png",
+"148 r37.png",
+"149 c38.png",
+"15 j5.png",
+"150 d38.png",
+"151 j38.png",
+"152 r38.png",
+"153 c39.png",
+"154 d39.png",
+"155 j39.png",
+"156 r39.png",
+"157 c40.png",
+"158 d99 (d40).png",
+"159 j40.png",
+"16 r5.PNG",
+"160 r40.png",
+"161 c41.png",
+"162 d40.png",
+"163 j41.png",
+"164 j42.png",
+"165 c42.png",
+"166 d41.png",
+"167 j43.png",
+"168 d42.png",
+"169 c43.png",
+"17 c4.png",
+"170 d43.png",
+"171 j44.png",
+"172 j45.png",
+"173 c44.png",
+"174 d44.png",
+"175 j46.png",
+"176 j47.png",
+"177 c45.png",
+"178 d45.png",
+"179 j48.png",
+"18 d4.png",
+"180 j49.png",
+"181 c46.png",
+"182 d46.png",
+"183 j50.png",
+"184 j51.png",
+"185 c47.png",
+"186 d47.png",
+"187 j52.png",
+"188 j53.png",
+"189 c48.png",
+"19 j6.png",
+"190 d48.png",
+"191 j54.png",
+"192 j55.png",
+"193 c49.png",
+"194 d49.png",
+"195 j56.png",
+"196 j57.png",
+"197 c50.png",
+"198 d50.png",
+"199 j58.png",
+"2 d1.png",
+"20 r6.png",
+"200 j59.png",
+"201 c51.png",
+"202 d51.png",
+"203 j60.png",
+"204 j61.png",
+"205 c52.png",
+"206 d52.png",
+"207 j62.png",
+"208 j63.png",
+"209 c53.png",
+"21 c5.PNG",
+"210 d53.png",
+"211 j64.png",
+"212 j65.png",
+"213 c54.png",
+"214 d54.png",
+"215 j66.png",
+"216 j67.png",
+"217 c55.png",
+"218 d55.png",
+"219 j68.png",
+"22 d5.png",
+"220 j69.png",
+"221 c56.png",
+"222 d56.png",
+"223 j70.png",
+"224 j71.png",
+"225 c57.PNG",
+"226 d57.png",
+"227 j72.png",
+"228 c58.png",
+"229 c59.png",
+"23 j7.png",
+"230 d58.png",
+"231 j73.png",
+"232 c60.png",
+"233 c61.png",
+"234 d59.png",
+"235 j74.png",
+"236 c62.png",
+"237 c63.png",
+"238 d60.png",
+"239 j75.png",
+"24 r7.png",
+"240 c64.png",
+"241 c65.png",
+"242 d61.png",
+"243 j76.png",
+"244 c66.png",
+"245 c67.png",
+"246 d62.png",
+"247 j77.png",
+"248 c68.png",
+"249 c69.png",
+"25 c6.png",
+"250 d63.png",
+"251 j78.png",
+"252 c70.png",
+"253 c71.png",
+"254 d64.png",
+"255 j79.png",
+"256 c72.png",
+"257 c73.png",
+"258 d65.png",
+"259 j80.png",
+"26 d6.png",
+"260 c74.png",
+"261 c75.png",
+"262 d66.png",
+"263 j81.png",
+"264 c76.png",
+"265 c77.PNG",
+"266 d67.png",
+"267 j82.png",
+"268 c78.png",
+"269 c79.png",
+"27 d7.png",
+"270 d68.png",
+"271 j83.png",
+"272 c80.png",
+"273 c81.png",
+"274 d69.png",
+"275 j84.png",
+"276 c82.png",
+"277 c83.png",
+"278 d70.png",
+"279 j85.png",
+"28 r8.png",
+"280 c84.png",
+"281 c85.png",
+"282 d100.png",
+"283 j86.png",
+"284 c86.png",
+"285 c87.png",
+"286 d71.png",
+"287 j87.png",
+"288 c88.png",
+"289 c89.png",
+"29 c7.png",
+"290 d72.png",
+"291 j88.png",
+"292 d73.png",
+"293 c90.png",
+"294 d74.png",
+"295 j89.png",
+"296 d75.png",
+"297 c91.png",
+"298 d76.png",
+"299 j90.png",
+"3 j1.png",
+"30 d8.png",
+"300 d77.png",
+"301 c92.png",
+"302 d78.PNG",
+"303 j91.png",
+"304 d79.png",
+"305 c93.png",
+"306 d80.png",
+"307 j92.png",
+"308 d81.png",
+"309 c94.png",
+"31 j8.png",
+"310 d82.png",
+"311 j93.png",
+"312 d83.png",
+"313 c95.png",
+"314 d84.png",
+"315 j94.png",
+"316 d85.png",
+"317 c96.png",
+"318 d86.png",
+"319 j95.png",
+"32 r9.png",
+"320 d87.png",
+"321 c97.png",
+"322 d88.png",
+"323 j96.png",
+"324 d89.png",
+"325 c98.png",
+"326 d90.png",
+"327 j97.png",
+"328 d91.png",
+"329 c99.png",
+"33 c8.png",
+"330 d92.png",
+"331 j98.png",
+"332 d93.png",
+"333 c100.png",
+"334 d94.png",
+"335 j99.png",
+"336 d95.png",
+"337 d96.png",
+"338 d97.png",
+"339 j100.png",
+"34 d9.png",
+"340 d98 (d100).png",
+"341.PNG",
+"342.PNG",
+"343.PNG",
+"344.PNG",
+"345.PNG",
+"346.PNG",
+"347.PNG",
+"348.PNG",
+"349.PNG",
+"35 j9.png",
+"350.png",
+"36 r10.png",
+"37 c9.png",
+"38 d10.png",
+"39 j10.png",
+"4 r1.png",
+"40 r11.png",
+"41 c10.png",
+"42 d11.png",
+"43 j11.png",
+"44 r12.png",
+"45 c11.png",
+"46 d12.png",
+"47 j12.png",
+"48 r13.png",
+"49 c12.png",
+"5 r2.png",
+"50 d13.png",
+"51 j13.png",
+"52 r14.png",
+"53 c13.png",
+"54 d14.png",
+"55 j14.png",
+"56 r15.png",
+"57 c14.png",
+"58 d15.png",
+"59 j15.png",
+"6 j2.png",
+"60 r16.PNG",
+"61 c15.png",
+"62 d16.png",
+"63 j16.png",
+"64 r17.png",
+"65 c16.png",
+"66 d17.png",
+"67 j17.png",
+"68 r18.png",
+"69 c17.png",
+"7 r3.png",
+"70 d18.png",
+"71 j18.png",
+"72 r19.png",
+"73 c18.png",
+"74 d19.png",
+"75 j19.png",
+"76 r20.png",
+"77 c19.png",
+"78 d20.png",
+"79 j20.png",
+"8 j3.png",
+"80 r21.png",
+"81 c20.png",
+"82 d21.png",
+"83 j21.png",
+"84 r22.png",
+"85 c21.png",
+"86 d22.png",
+"87 j22.png",
+"88 r23.png",
+"89 c22.png",
+"9 c2.png",
+"90 d23.png",
+"91 j23.png",
+"92 r24.png",
+"93 c23.png",
+"94 d24.png",
+"95 j24.png",
+"96 r25.png",
+"97 c24.png",
+"98 d25.png",
+"99 j25.png",
+ 
+
+
+
+
+           
+            // Add more image URLs here
+        ];    
+        const imageSlider = document.getElementById("image-slider");
+
+function createSliderImages() {
+    const delayFactor = 5 / images.length; // Calculate the delay based on the number of images
+
+    images.forEach((imageUrl, index) => {
+        const imageElement = document.createElement("img");
+        imageElement.src = imageUrl;
+        imageElement.classList.add("slider-image");
+        imageElement.style.animationDelay = `${index * delayFactor}s`;
+        imageSlider.appendChild(imageElement);
+    });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    createSliderImages();
+});
+</script>
+</body>
+</html>
